@@ -1,0 +1,9 @@
+.old-bears{
+    margin: 1rem;
+}
+
+.old-bears li{
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: .25rem;
+    margin-bottom: .25rem;
+}

@@ -20,4 +20,10 @@ public with sharing class BearController {
             Location__Latitude__s, Location__Longitude__s, Supervisor__r.Name
             FROM Bear__c WHERE Name LIKE :searchTerm ORDER BY Name LIMIT 50];
     }
+
+    @AuraEnabled(Cacheable=true)
+    public static Bear__c[] getOldBears() {
+        return [SELECT Name, Age__c
+        FROM Bear__c ORDER BY Age__c DESC LIMIT 3];
+    }
 }
